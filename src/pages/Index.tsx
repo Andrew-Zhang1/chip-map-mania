@@ -41,8 +41,8 @@ const Index = () => {
     }),
     useSensor(TouchSensor, {
       activationConstraint: {
-        delay: 200,
-        tolerance: 8,
+        delay: 100,
+        tolerance: 5,
       },
     }),
     useSensor(KeyboardSensor, {

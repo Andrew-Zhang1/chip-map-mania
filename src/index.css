@@ -36,12 +36,12 @@ All colors MUST be HSL.
     --input: 45 15% 88%;
     --ring: 35 77% 49%;
 
-    /* Chip-themed colors */
-    --chip-classic: 45 85% 65%;
-    --chip-spicy: 12 88% 59%;
-    --chip-cheesy: 48 97% 77%;
-    --chip-bbq: 20 45% 35%;
-    --chip-salt: 210 20% 85%;
+    /* Chip-themed colors - Blue & Purple */
+    --chip-classic: 220 75% 70%;
+    --chip-spicy: 270 85% 65%;
+    --chip-cheesy: 200 90% 60%;
+    --chip-bbq: 260 60% 45%;
+    --chip-salt: 240 50% 80%;
     
     /* Gradients */
     --gradient-warm: linear-gradient(135deg, hsl(var(--chip-classic)), hsl(var(--accent)));

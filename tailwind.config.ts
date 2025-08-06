@@ -52,6 +52,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				chip: {
+					classic: 'hsl(var(--chip-classic))',
+					spicy: 'hsl(var(--chip-spicy))',
+					cheesy: 'hsl(var(--chip-cheesy))',
+					bbq: 'hsl(var(--chip-bbq))',
+					salt: 'hsl(var(--chip-salt))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

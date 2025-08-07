@@ -22,7 +22,10 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/hooks/use-toast';
-import { Trash2, Download, Upload } from 'lucide-react';
+import { Trash2, Download } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { useAuth } from '@/contexts/AuthContext';
+import { supabase } from '@/integrations/supabase/client';
 
 const Index = () => {
   const [flavors, setFlavors] = useState<ChipFlavor[]>([
@@ -32,6 +35,12 @@ const Index = () => {
     { id: '4', name: 'BBQ Pringles', category: 'bbq', brand: 'Pringles' },
   ]);
   const { toast } = useToast();
+  const { user } = useAuth();
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    toast({ title: "Signed out", description: "You have been logged out." });
+  };
 
   const sensors = useSensors(
     useSensor(PointerSensor),
@@ -116,6 +125,13 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-[var(--gradient-bg)] p-4">
       <div className="max-w-6xl mx-auto space-y-8">
+        <div className="flex justify-end">
+          {user ? (
+            <Button variant="outline" size="sm" onClick={handleLogout}>Log out</Button>
+          ) : (
+            <Link to="/auth" className="text-sm underline">Log in</Link>
+          )}
+        </div>
         {/* Header */}
         <div className="text-center space-y-4">
           <h1 className="text-4xl md:text-6xl font-bold bg-[var(--gradient-warm)] bg-clip-text text-transparent">

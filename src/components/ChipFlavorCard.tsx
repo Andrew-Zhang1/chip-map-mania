@@ -53,7 +53,7 @@ export function ChipFlavorCard({ flavor, rank, onRemove }: ChipFlavorCardProps) 
       ref={setNodeRef}
       style={style}
       className={`
-        relative p-4 cursor-grab active:cursor-grabbing
+        relative p-4 cursor-grab active:cursor-grabbing touch-none select-none
         shadow-[var(--shadow-chip)] border-2
         ${categoryStyles[flavor.category]}
         ${isDragging ? 'opacity-50 shadow-[var(--shadow-elevated)]' : 'hover:shadow-[var(--shadow-elevated)]'}

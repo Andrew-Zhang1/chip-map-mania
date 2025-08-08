@@ -57,7 +57,8 @@ export default {
 					spicy: 'hsl(var(--chip-spicy))',
 					cheesy: 'hsl(var(--chip-cheesy))',
 					bbq: 'hsl(var(--chip-bbq))',
-					salt: 'hsl(var(--chip-salt))'
+					salt: 'hsl(var(--chip-salt))',
+					other: 'hsl(var(--chip-other))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

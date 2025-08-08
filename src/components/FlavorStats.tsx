@@ -16,13 +16,14 @@ export function FlavorStats({ flavors }: FlavorStatsProps) {
   const topCategory = Object.entries(categoryCount).sort(([,a], [,b]) => b - a)[0];
   const brandCount = flavors.filter(f => f.brand).length;
 
-  const categoryLabels = {
-    classic: 'Original',
-    spicy: 'Spicy',
-    cheesy: 'Cheesy',
-    bbq: 'BBQ',
-    salt: 'Salt & Vinegar',
-  };
+const categoryLabels = {
+  classic: 'Original',
+  spicy: 'Spicy',
+  cheesy: 'Cheesy',
+  bbq: 'BBQ',
+  salt: 'Salt & Vinegar',
+  other: 'Other',
+};
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

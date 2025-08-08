@@ -7,7 +7,7 @@ import { Card } from '@/components/ui/card';
 export interface ChipFlavor {
   id: string;
   name: string;
-  category: 'classic' | 'spicy' | 'cheesy' | 'bbq' | 'salt';
+  category: 'classic' | 'spicy' | 'cheesy' | 'bbq' | 'salt' | 'other';
   brand?: string;
 }
 
@@ -23,6 +23,7 @@ const categoryStyles = {
   cheesy: 'bg-chip-cheesy border-chip-cheesy/30',
   bbq: 'bg-chip-bbq border-chip-bbq/30',
   salt: 'bg-chip-salt border-chip-salt/30',
+  other: 'bg-chip-other border-chip-other/30',
 };
 
 const categoryLabels = {
@@ -31,6 +32,7 @@ const categoryLabels = {
   cheesy: 'Cheesy',
   bbq: 'BBQ',
   salt: 'Salt & Vinegar',
+  other: 'Other',
 };
 
 export function ChipFlavorCard({ flavor, rank, onRemove }: ChipFlavorCardProps) {

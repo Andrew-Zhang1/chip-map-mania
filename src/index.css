@@ -42,6 +42,7 @@ All colors MUST be HSL.
     --chip-cheesy: 200 90% 60%;
     --chip-bbq: 260 60% 45%;
     --chip-salt: 240 50% 80%;
+    --chip-other: 210 10% 70%;
     
     /* Gradients */
     --gradient-warm: linear-gradient(135deg, hsl(var(--chip-classic)), hsl(var(--accent)));

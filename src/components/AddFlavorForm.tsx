@@ -17,6 +17,7 @@ const categories = [
   { value: 'cheesy', label: 'Cheesy' },
   { value: 'bbq', label: 'BBQ' },
   { value: 'salt', label: 'Salt & Vinegar' },
+  { value: 'other', label: 'Other' },
 ] as const;
 
 export function AddFlavorForm({ onAdd }: AddFlavorFormProps) {

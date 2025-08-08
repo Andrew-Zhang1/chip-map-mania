@@ -49,7 +49,7 @@ const Auth: React.FC = () => {
       const { error } = await supabase.auth.signInWithPassword({ email, password });
       if (error) throw error;
       toast({ title: "Welcome back!", description: "You are now signed in." });
-      const from = (location.state as any)?.from?.pathname || "/";
+      const from = (location.state as any)?.from?.pathname || "/home";
       navigate(from, { replace: true });
     } catch (err: any) {
       toast({ title: "Login failed", description: err.message, variant: "destructive" as any });
@@ -62,7 +62,7 @@ const Auth: React.FC = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const redirectUrl = `${window.location.origin}/`;
+      const redirectUrl = `${window.location.origin}/home`;
       const { error } = await supabase.auth.signUp({
         email,
         password,
@@ -135,7 +135,7 @@ const Auth: React.FC = () => {
             By continuing, you agree to our terms.
           </p>
           <div className="text-center mt-4">
-            <Link to="/" className="underline text-sm">Back to home</Link>
+            <Link to="/home" className="underline text-sm">Back to home</Link>
           </div>
         </CardContent>
       </Card>
